@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbed Panels</title>
+
+    <style>
+
+    </style>
+</head>
+<body>
+    <ul class="tab-bar">
+        <li id="tab1" onclick="switchOne()"> Tab One</li>
+        <li id="tab2" onclick="switchTwo()"> Tab Two</li>
+    </ul>
+    <div class="panel" id="panel1">
+        Panel One 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni est culpa eveniet, at minus quam accusamus. Eligendi numquam itaque tempora maxime fuga est adipisci ut unde, reprehenderit sint exercitationem. Esse!
+    </div>
+    <div class="panel" id="panel2">
+        Panel switchTwo
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, inventore assumenda? Maxime, cum earum veniam vero harum inventore explicabo laudantium tempora iure officiis, sapiente dolorum? Doloribus porro eaque est
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim laudantium consequuntur, nostrum quasi consequatur cumque fugiat commodi, fugit minima dicta vel, quibusdam placeat hic. Sed nisi aperiam cupiditate ipsam molestiae.
+    </div>
+
+    <script>
+        function get(obj){
+            return document.getElementById(obj);
+        }
+
+        function swithOne() {
+            get("tab1").style.background = "#fff";
+            get("tab2").style.background = "#e55";
+            get("panel1").style.display = "block";
+            get("panel2").style.display = "none";
+        }
+
+        function swithTwo() {
+            get("tab1").style.background = "#e55";
+            get("tab2").style.background = "#fff";
+            get("panel1").style.display = "none";
+            get("panel2").style.display = "block";
+        }
+
+    </script>
+</body>
+</html>
